@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zoe 2026 · In the Beginning — Opener Concept</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#efe4c7; --parchment-2:#e6d6b0; --parchment-edge:#d8c39a;
+  --ink:#332c1d; --ink-soft:#6a5d42;
+  --burgundy:#6e1f2a; --burgundy-deep:#511620; --rose:#9c3142;
+  --gold:#b0852b; --gold-bright:#dcb45a; --gold-deep:#856017;
+  --sage:#6f7d4d; --sage-deep:#515e37;
+  --theatre:#070809;
+  --serif:"EB Garamond",Georgia,serif;
+  --display:"Cormorant Garamond",Georgia,serif;
+  --caps:"Cinzel",Georgia,serif;
+  --black:"UnifrakturMaguntia","Cormorant Garamond",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;scroll-snap-type:y proximity;}
+body{
+  font-family:var(--serif); color:var(--ink); background:var(--parchment);
+  font-size:19px; line-height:1.6; -webkit-font-smoothing:antialiased;
+}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:200;opacity:.05;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+section{position:relative;scroll-snap-align:start;}
+.paper{min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+  padding:8vh 7vw;overflow:hidden;
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(255,250,235,.55), rgba(255,250,235,0) 55%),
+    radial-gradient(130% 120% at 50% 110%, rgba(120,96,40,.16), rgba(120,96,40,0) 60%),
+    linear-gradient(180deg,var(--parchment),var(--parchment-2));}
+.paper::after{content:"";position:absolute;inset:0;pointer-events:none;
+  box-shadow:inset 0 0 160px rgba(95,72,28,.28), inset 0 0 40px rgba(95,72,28,.16);}
+.wrap{max-width:1080px;margin:0 auto;width:100%;position:relative;z-index:3;}
+
+.kicker{font-family:var(--caps);text-transform:uppercase;letter-spacing:.34em;
+  font-size:13px;font-weight:600;color:var(--burgundy);margin-bottom:1.1rem;}
+.headline{font-family:var(--display);font-weight:600;line-height:1.04;
+  font-size:clamp(2.5rem,6.4vw,5rem);letter-spacing:.005em;}
+.headline.it{font-style:italic;font-weight:500;}
+.gold{background:linear-gradient(176deg,var(--gold-bright),var(--gold) 52%,var(--gold-deep));
+  -webkit-background-clip:text;background-clip:text;color:transparent;}
+.sub{font-size:clamp(1.05rem,1.5vw,1.35rem);color:var(--ink-soft);max-width:40ch;}
+p.body{font-size:1.18rem;color:var(--ink);max-width:62ch;margin-top:1.1rem;}
+.vo{font-family:var(--display);font-style:italic;color:var(--burgundy);
+  font-size:clamp(1.3rem,2.4vw,1.9rem);line-height:1.3;}
+
+.rule{display:flex;align-items:center;gap:14px;margin:1.6rem 0;color:var(--gold);max-width:380px;}
+.rule i{height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.rule b{font-size:11px;transform:rotate(45deg);width:7px;height:7px;border:1px solid var(--gold);}
+
+/* drop cap */
+.dropcap::first-letter{font-family:var(--display);float:left;font-weight:600;font-size:5.4rem;
+  line-height:.78;padding:.42rem .55rem .1rem 0;color:var(--burgundy);
+  text-shadow:1px 1px 0 rgba(176,133,43,.35);}
+
+/* corner ornaments injected via JS */
+.vine{position:absolute;width:150px;height:150px;z-index:2;opacity:.9;pointer-events:none;}
+.vine.tl{top:18px;left:20px;}
+.vine.br{bottom:18px;right:20px;transform:rotate(180deg);}
+
+/* COVER */
+#cover{height:100vh;display:flex;align-items:flex-end;justify-content:center;
+  background:#1a1408;overflow:hidden;}
+#cover .bg{position:absolute;inset:0;background-image:url("Reference/Title%20Slide.png");
+  background-size:cover;background-position:center;}
+#cover .veil{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(20,15,6,.18) 0%,rgba(20,15,6,0) 28%,rgba(20,15,6,.30) 62%,rgba(18,12,4,.86) 100%);}
+#cover .coverwrap{position:relative;z-index:3;text-align:center;padding:0 6vw 9vh;max-width:1000px;}
+#cover .eyebrow{font-family:var(--caps);text-transform:uppercase;letter-spacing:.42em;
+  font-size:13px;color:#f0e3c2;font-weight:500;margin-bottom:1.1rem;
+  text-shadow:0 2px 14px rgba(0,0,0,.7);}
+#cover h1{font-family:var(--display);font-weight:600;font-style:italic;
+  font-size:clamp(2.8rem,7vw,5.6rem);line-height:1.02;color:#fff7e4;
+  text-shadow:0 2px 30px rgba(0,0,0,.6);}
+#cover .tag{margin-top:1.4rem;font-size:clamp(1.05rem,1.7vw,1.4rem);color:#ecdfbe;
+  text-shadow:0 1px 12px rgba(0,0,0,.7);}
+#cover .scrollcue{margin-top:2.6rem;font-family:var(--caps);letter-spacing:.3em;
+  text-transform:uppercase;font-size:11px;color:#e7d7af;opacity:.85;}
+
+/* BEAT slides — dark theatre with parchment caption */
+.beat{height:100vh;overflow:hidden;background:var(--theatre);}
+.beat canvas,.beat img.scene{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;}
+.beat .scrim{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(5,5,8,.72) 0%,rgba(5,5,8,.30) 42%,rgba(5,5,8,0) 70%);}
+.card{position:absolute;left:6vw;top:50%;transform:translateY(-50%);z-index:4;
+  width:min(440px,82vw);padding:2.4rem 2.4rem 2.6rem;
+  background:linear-gradient(180deg,rgba(241,228,200,.97),rgba(230,214,176,.97));
+  border:1px solid var(--parchment-edge);
+  box-shadow:0 26px 60px rgba(0,0,0,.55);}
+.card::before{content:"";position:absolute;inset:7px;border:1px solid rgba(176,133,43,.5);pointer-events:none;}
+.card .num{font-family:var(--caps);letter-spacing:.3em;text-transform:uppercase;
+  font-size:12px;color:var(--burgundy);font-weight:600;}
+.card h2{font-family:var(--display);font-weight:600;font-size:2.4rem;line-height:1.05;
+  margin:.3rem 0 .9rem;}
+.card .vo{font-size:1.2rem;margin:.2rem 0 1rem;}
+.card .does{font-size:1.04rem;color:var(--ink-soft);line-height:1.5;}
+.card .does b{color:var(--ink);font-weight:600;}
+
+/* three-act mini cards */
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:.5rem;}
+.act{background:rgba(255,250,236,.6);border:1px solid var(--parchment-edge);
+  padding:1.3rem 1.3rem 1.5rem;position:relative;}
+.act .t{font-family:var(--caps);letter-spacing:.16em;text-transform:uppercase;
+  font-size:12px;color:var(--burgundy);font-weight:600;margin-bottom:.5rem;}
+.act p{font-size:1.02rem;color:var(--ink);line-height:1.45;}
+.act .n{position:absolute;top:-14px;right:14px;font-family:var(--display);font-style:italic;
+  font-size:2.2rem;color:var(--gold);}
+
+figure.chart{margin-top:2.2rem;background:rgba(255,250,236,.5);border:1px solid var(--parchment-edge);
+  padding:1.2rem 1.2rem .6rem;}
+figure.chart svg{width:100%;height:auto;display:block;}
+
+/* setup */
+.setup-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center;}
+.setup-grid svg{width:100%;height:auto;display:block;}
+.points{list-style:none;}
+.points li{position:relative;padding:.55rem 0 .55rem 2rem;font-size:1.1rem;
+  border-bottom:1px solid rgba(120,96,40,.18);}
+.points li::before{content:"";position:absolute;left:2px;top:1.15rem;width:9px;height:9px;
+  background:var(--gold);transform:rotate(45deg);}
+.status{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:1.8rem;}
+.status div{padding:1rem 1.1rem;border:1px solid var(--parchment-edge);background:rgba(255,250,236,.55);}
+.status .h{font-family:var(--caps);text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:600;}
+.status .ok .h{color:var(--sage-deep);} .status .todo .h{color:var(--burgundy);}
+.status p{font-size:1rem;color:var(--ink-soft);margin-top:.3rem;line-height:1.4;}
+
+/* brand */
+.brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+.refs{display:flex;gap:18px;}
+.refs img{width:50%;border:1px solid var(--parchment-edge);box-shadow:0 14px 30px rgba(60,42,12,.25);
+  border-radius:2px;object-fit:cover;}
+.swatches{display:flex;gap:10px;margin:1.4rem 0;}
+.sw{flex:1;height:62px;border:1px solid rgba(95,72,28,.3);position:relative;border-radius:2px;}
+.sw span{position:absolute;bottom:-22px;left:0;right:0;text-align:center;font-size:11px;
+  font-family:var(--caps);letter-spacing:.05em;color:var(--ink-soft);}
+.typesample div{line-height:1.1;margin:.2rem 0;}
+
+/* next */
+.checklist{list-style:none;margin-top:.5rem;}
+.checklist li{display:flex;gap:14px;align-items:flex-start;padding:.7rem 0;
+  border-bottom:1px solid rgba(120,96,40,.18);font-size:1.12rem;}
+.checklist .mk{flex:none;width:26px;height:26px;border:1px solid var(--gold);color:var(--gold-deep);
+  display:flex;align-items:center;justify-content:center;font-size:13px;margin-top:2px;}
+.timeline{margin-top:1.8rem;font-family:var(--caps);letter-spacing:.14em;text-transform:uppercase;
+  font-size:14px;color:var(--burgundy);font-weight:600;}
+.closer{font-family:var(--display);font-style:italic;font-weight:600;
+  font-size:clamp(2rem,5vw,3.4rem);margin-top:1.6rem;}
+.zmark{width:64px;height:64px;border:1.5px solid var(--gold);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;margin-top:1.4rem;
+  font-family:var(--black);font-size:2rem;color:var(--gold-deep);background:rgba(255,250,236,.4);}
+
+/* nav + progress */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:300;
+  background:linear-gradient(90deg,var(--gold-bright),var(--gold));}
+#nav{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:300;
+  display:flex;flex-direction:column;gap:13px;}
+#nav a{width:11px;height:11px;border-radius:50%;border:1px solid var(--gold-deep);
+  background:transparent;transition:all .25s;position:relative;}
+#nav a.active{background:var(--gold);box-shadow:0 0 0 4px rgba(176,133,43,.22);}
+#nav a span{position:absolute;right:20px;top:50%;transform:translateY(-50%);white-space:nowrap;
+  font-family:var(--caps);text-transform:uppercase;letter-spacing:.12em;font-size:10px;
+  color:var(--ink);background:rgba(241,228,200,.9);padding:3px 8px;border:1px solid var(--parchment-edge);
+  opacity:0;transition:opacity .2s;pointer-events:none;}
+#nav a:hover span{opacity:1;}
+
+@media (max-width:820px){
+  .setup-grid,.brand-grid{grid-template-columns:1fr;gap:26px;}
+  .acts{grid-template-columns:1fr;}
+  .card{left:50%;transform:translate(-50%,0);bottom:5vh;top:auto;}
+  .beat{}
+  #nav{display:none;}
+}
+@media print{
+  html{scroll-snap-type:none;}
+  #nav,#progress,.grain,.scrollcue{display:none;}
+  section{break-after:page;min-height:auto;height:auto;}
+  .beat{height:90vh;}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div id="progress"></div>
+<nav id="nav"></nav>
+
+<svg width="0" height="0" style="position:absolute"><symbol id="vineSym" viewBox="0 0 100 100">
+  <path d="M6,96 C16,70 8,52 28,44 C40,39 44,28 40,14" fill="none" stroke="#6f7d4d" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M22,58 C10,54 4,44 6,34 C16,38 24,46 22,58 Z" fill="#6f7d4d" opacity=".9"/>
+  <path d="M27,46 C34,34 46,30 56,32 C50,44 38,49 27,46 Z" fill="#515e37" opacity=".9"/>
+  <path d="M33,72 C24,72 16,66 14,56 C26,56 34,62 33,72 Z" fill="#7f8d5b" opacity=".85"/>
+  <circle cx="40" cy="10" r="8" fill="#6e1f2a"/>
+  <circle cx="40" cy="10" r="4.6" fill="#9c3142"/>
+  <circle cx="40" cy="10" r="1.8" fill="#dcb45a"/>
+  <circle cx="55" cy="30" r="3" fill="#6e1f2a"/><circle cx="55" cy="30" r="1.3" fill="#dcb45a"/>
+</symbol></svg>
+
+<!-- COVER -->
+<section id="cover" data-nav="Cover">
+  <div class="bg"></div><div class="veil"></div>
+  <div class="coverwrap">
+    <div class="eyebrow">Zoe Conference 2026 · Opener Concept</div>
+    <h1>In the Beginning</h1>
+    <div class="tag">A suspended field of light that performs John 1 — live, over the whole room.</div>
+    <div class="scrollcue">scroll to begin ⌄</div>
+  </div>
+</section>
+
+<!-- THE IDEA -->
+<section id="idea" class="paper" data-nav="The idea">
+  <div class="wrap">
+    <div class="kicker">The big idea</div>
+    <h2 class="headline">The lights aren't decoration.<br><span class="gold it">They're the light of John 1.</span></h2>
+    <div class="rule"><i></i><b></b><i></i></div>
+    <p class="body dropcap">This year's theme lives in one sentence — <em>"In him was life, and that life was the light of all mankind. The light shines in the darkness, and the darkness has not overcome it."</em> Your opener voiceover is already a journey from a dark void into overwhelming light. So rather than point lights <em>at</em> that idea, we hang the idea <em>over the room</em>: roughly 1,200 of the leftover xylobands, suspended on fishing line above the stage and the audience, choreographed to perform the script in real time — a field that begins as nothing, becomes a starfield, and ends as a blaze the whole room is standing inside.</p>
+    <p class="vo" style="margin-top:1.6rem;">"In the beginning was the Word." <span style="font-family:var(--caps);font-style:normal;font-size:.7em;letter-spacing:.15em;color:var(--ink-soft);">— John 1:1</span></p>
+  </div>
+</section>
+
+<!-- THE ARC -->
+<section id="arc" class="paper" data-nav="The arc">
+  <div class="wrap">
+    <div class="kicker">The shape of it</div>
+    <h2 class="headline">One song, <span class="gold">three acts of light.</span></h2>
+    <div class="acts">
+      <div class="act"><div class="n">i</div><div class="t">The song</div><p>Indiana Bible College's <em>John 1</em> opens with strong vocals. The ceiling stays dark — no one knows it's there yet.</p></div>
+      <div class="act"><div class="n">ii</div><div class="t">The voiceover</div><p>Room to black, then one light. The field is reborn as the music builds underneath.</p></div>
+      <div class="act"><div class="n">iii</div><div class="t">The worship</div><p>The music crests, the field blazes, and the team leads the room into worship.</p></div>
+    </div>
+    <figure class="chart" id="arcChart"></figure>
+  </div>
+</section>
+
+<!-- BEATS -->
+<section class="beat" data-nav="One · The before"><img class="scene" src="Generated%20Images/beat-1-void.png" alt="The void — a single warm light suspended high in a blacked-out auditorium"><div class="scrim"></div>
+  <div class="card"><div class="num">One · the before</div><h2>The void</h2>
+    <p class="vo">"Before the first heartbeat of time… there was the Word."</p>
+    <p class="does"><b>Blackout.</b> Then a single, steady light — the first thing the room sees, suspended in the dark with the faintest pool spilling onto the stage.</p></div></section>
+
+<section class="beat" data-nav="Two · Creation"><img class="scene" src="Generated%20Images/beat-2-creation.png" alt="The starfield — a cool blue-white canopy of stars filling the room over stage and audience"><div class="scrim"></div>
+  <div class="card"><div class="num">Two · creation</div><h2>The starfield</h2>
+    <p class="vo">"Through Him all things were made."</p>
+    <p class="does">One light <b>multiplies</b> into a canopy of cool-white stars, then snaps to a single unified shimmer on "galaxies align."</p></div></section>
+
+<section class="beat" data-nav="Three · Life"><img class="scene" src="Generated%20Images/beat-3-life.png" alt="The wildfire — warm gold light catching and spreading across the field while one side stays cool"><div class="scrim"></div>
+  <div class="card"><div class="num">Three · life</div><h2>The wildfire</h2>
+    <p class="vo">"And in Him is Life… a wildfire."</p>
+    <p class="does">The whole field <b>breaks to warm gold</b> and surges — life igniting across the room.</p></div></section>
+
+<section class="beat" data-nav="Four · The turn"><img class="scene" src="Generated%20Images/beat-4-turn.png" alt="The turn — the field collapsed to darkness with only a few cold lights surviving"><div class="scrim"></div>
+  <div class="card"><div class="num">Four · the turn</div><h2>The night</h2>
+    <p class="vo">"The enemy whispers that the night is winning. But the Word has already spoken."</p>
+    <p class="does">The field <b>collapses toward darkness</b>, then stabs back — a burst on every verb: shines, pierces, cuts, shatters.</p></div></section>
+
+<section class="beat" data-nav="Five · The light"><img class="scene" src="Generated%20Images/beat-5-blaze.png" alt="The blaze — the full warm-gold field at peak with the audience standing inside the light"><div class="scrim"></div>
+  <div class="card"><div class="num">Five · the light</div><h2>The Light is here</h2>
+    <p class="vo">"The Beginning is here. The Light is here. Jesus is here."</p>
+    <p class="does"><b>Full blaze.</b> ~1,200 points at once as worship lands — the room isn't watching the light anymore, it's standing inside it.</p></div></section>
+
+<!-- SETUP -->
+<section id="setup" class="paper" data-nav="The setup">
+  <div class="wrap">
+    <div class="kicker">How it works</div>
+    <h2 class="headline">Hung over the room, <span class="gold">run like an instrument.</span></h2>
+    <div class="rule"><i></i><b></b><i></i></div>
+    <div class="setup-grid">
+      <svg id="planSvg" viewBox="0 0 520 460" role="img" aria-label="Overhead plan of the xyloband field over the stage and front seating"></svg>
+      <div>
+        <ul class="points">
+          <li>≈1,200 of the ~2,000 leftover xylobands, on clear fishing line at staggered heights.</li>
+          <li>Over the stage <em>and</em> the front of house — so the audience ends up inside the field.</li>
+          <li>Driven by the band control system, choreographed to the voiceover and music.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND -->
+<section id="brand" class="paper" data-nav="On brand">
+  <div class="wrap">
+    <div class="kicker">Staying on brand</div>
+    <h2 class="headline">Built from your <span class="gold it">Zoe 2026 world.</span></h2>
+    <div class="rule"><i></i><b></b><i></i></div>
+    <div class="brand-grid">
+      <div class="refs">
+        <img src="Reference/Title%20Slide.png" alt="In the Beginning title slide">
+        <img src="Reference/Zoe2026-SaveTheDate-Email%20COMPRESSED.png" alt="Zoe 2026 save the date">
+      </div>
+      <div>
+        <p class="body" style="margin-top:0;">Warm gold for the light. Deep burgundy and sage lifted from the save-the-date. The same golden-hour, illuminated-manuscript feel — so the opener looks like it grew out of the brand, not bolted on.</p>
+        <div class="swatches">
+          <div class="sw" style="background:var(--parchment-2)"><span>parchment</span></div>
+          <div class="sw" style="background:var(--burgundy)"><span>burgundy</span></div>
+          <div class="sw" style="background:var(--gold)"><span>gold</span></div>
+          <div class="sw" style="background:var(--sage)"><span>sage</span></div>
+          <div class="sw" style="background:var(--rose)"><span>rose</span></div>
+        </div>
+        <div class="typesample" style="margin-top:2.4rem;">
+          <div style="font-family:var(--display);font-style:italic;font-size:2rem;color:var(--burgundy)">In the Beginning</div>
+          <div style="font-family:var(--caps);letter-spacing:.2em;text-transform:uppercase;font-size:1rem;color:var(--gold-deep)">Zoe Conference 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section id="close" class="paper" data-nav="In the Beginning">
+  <div class="wrap" style="text-align:center;">
+    <div class="closer gold" style="margin-top:0;">The Beginning is here.</div>
+    <div class="rule" style="margin:1.6rem auto;"><i></i><b></b><i></i></div>
+    <div class="timeline">Zoe Conference · September 25–26, 2026 · The Life Church Memphis</div>
+  </div>
+</section>
+
+<script>
+/* ---- corner ornaments on paper slides ---- */
+document.querySelectorAll('.paper').forEach(function(s){
+  ['tl','br'].forEach(function(c){
+    var svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    svg.setAttribute('class','vine '+c); svg.setAttribute('viewBox','0 0 100 100');
+    var u=document.createElementNS('http://www.w3.org/2000/svg','use');
+    u.setAttribute('href','#vineSym'); svg.appendChild(u); s.appendChild(svg);
+  });
+});
+
+/* ---- nav dots + progress + scrollspy ---- */
+var secs=[].slice.call(document.querySelectorAll('section'));
+var nav=document.getElementById('nav');
+secs.forEach(function(s,i){
+  var a=document.createElement('a'); a.href='#'+(s.id||'s'+i);
+  a.innerHTML='<span>'+(s.dataset.nav||'')+'</span>';
+  a.addEventListener('click',function(e){e.preventDefault();s.scrollIntoView({behavior:'smooth'});});
+  nav.appendChild(a);
+});
+var dots=[].slice.call(nav.children);
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(en){ if(en.isIntersecting){
+    var i=secs.indexOf(en.target);
+    dots.forEach(function(d,j){d.classList.toggle('active',j===i);});
+  }});
+},{threshold:.55});
+secs.forEach(function(s){io.observe(s);});
+addEventListener('scroll',function(){
+  var h=document.documentElement;
+  var p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);
+  document.getElementById('progress').style.width=(p*100)+'%';
+},{passive:true});
+
+/* ---- arrow-key navigation ---- */
+function current(){var c=0,best=1e9;secs.forEach(function(s,i){var d=Math.abs(s.getBoundingClientRect().top);if(d<best){best=d;c=i;}});return c;}
+addEventListener('keydown',function(e){
+  if(e.key==='ArrowDown'||e.key==='PageDown'){e.preventDefault();var n=Math.min(secs.length-1,current()+1);secs[n].scrollIntoView({behavior:'smooth'});}
+  if(e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();var p=Math.max(0,current()-1);secs[p].scrollIntoView({behavior:'smooth'});}
+});
+
+/* ---- light-field canvas scenes ---- */
+var WARM=[[255,243,208],[244,214,122],[232,196,90],[216,174,60],[201,162,39]];
+var COOL=[[226,238,255],[201,223,252],[176,205,242],[150,186,235],[126,168,226]];
+var SCENES={
+  void:{mode:'void'},
+  creation:{mode:'field',palette:'cool',count:150,bg:[[0,'#0a0c14'],[0.5,'#070810'],[1,'#050608']],ceiling:'rgba(150,180,235,0.10)',brightBase:0.45,brightVar:0.6,sizeMin:2,sizeMax:6,lines:true,stage:true,audience:true,accent:[176,205,242,0.16]},
+  life:{mode:'field',palette:'warm',count:155,bg:[[0,'#1a1206'],[0.5,'#0c0a06'],[1,'#070504']],ceiling:'rgba(201,162,39,0.13)',brightBase:0.5,brightVar:0.62,sizeMin:2,sizeMax:7,lines:true,stage:true,audience:true,accent:[232,196,90,0.18],baseGlow:true},
+  turn:{mode:'field',palette:'cool',count:22,bg:[[0,'#06070a'],[0.6,'#040406'],[1,'#020203']],ceiling:null,brightBase:0.16,brightVar:0.32,sizeMin:1.5,sizeMax:3.6,lines:false,stage:true,audience:true,accent:[150,170,210,0.07],survivors:3},
+  blaze:{mode:'field',palette:'warm',count:178,bg:[[0,'#1b1407'],[0.45,'#0c0a07'],[1,'#060504']],ceiling:'rgba(201,162,39,0.16)',brightBase:0.55,brightVar:0.62,sizeMin:2.2,sizeMax:7.5,lines:true,stage:true,audience:true,accent:[232,196,90,0.20]}
+};
+function rgba(c,a){return 'rgba('+c[0]+','+c[1]+','+c[2]+','+a+')';}
+function renderScene(cv){
+  var cfg=SCENES[cv.dataset.scene]; if(!cfg) return;
+  var dpr=Math.min(window.devicePixelRatio||1,2);
+  var W=cv.clientWidth,H=cv.clientHeight; if(!W||!H) return;
+  cv.width=W*dpr; cv.height=H*dpr;
+  var x=cv.getContext('2d'); x.setTransform(dpr,0,0,dpr,0,0);
+  var bg=x.createLinearGradient(0,0,0,H); cfg.bg?cfg.bg.forEach(function(s){bg.addColorStop(s[0],s[1]);}):bg.addColorStop(0,'#070809');
+  if(!cfg.bg){bg.addColorStop(0,'#070809');bg.addColorStop(1,'#050608');}
+  x.fillStyle=bg; x.fillRect(0,0,W,H);
+  if(cfg.ceiling){var cg=x.createRadialGradient(W/2,H*0.14,30,W/2,H*0.14,Math.max(W,H));cg.addColorStop(0,cfg.ceiling);cg.addColorStop(1,'rgba(0,0,0,0)');x.fillStyle=cg;x.fillRect(0,0,W,H);}
+  function glow(gx,gy,r,stops){var g=x.createRadialGradient(gx,gy,0,gx,gy,r);stops.forEach(function(s){g.addColorStop(s[0],s[1]);});x.fillStyle=g;x.beginPath();x.arc(gx,gy,r,0,6.2832);x.fill();}
+  function point(gx,gy,r,c,b){
+    var g=x.createRadialGradient(gx,gy,0,gx,gy,r*6);
+    g.addColorStop(0,rgba(c,0.45*b));g.addColorStop(0.4,rgba(c,0.12*b));g.addColorStop(1,rgba(c,0));
+    x.fillStyle=g;x.beginPath();x.arc(gx,gy,r*6,0,6.2832);x.fill();
+    x.fillStyle=rgba(c,Math.min(1,0.8*b+0.15));x.beginPath();x.arc(gx,gy,r,0,6.2832);x.fill();
+    x.fillStyle=rgba([255,250,236],Math.min(1,b));x.beginPath();x.arc(gx,gy,r*0.45,0,6.2832);x.fill();
+  }
+  function stage(){
+    var sg=x.createLinearGradient(0,H*0.78,0,H);sg.addColorStop(0,'#0a0806');sg.addColorStop(1,'#040302');
+    x.fillStyle=sg;x.fillRect(0,H*0.81,W,H*0.19);
+    x.strokeStyle=rgba(cfg.accent?[cfg.accent[0],cfg.accent[1],cfg.accent[2]]:[201,162,39],0.5);x.lineWidth=2;
+    x.beginPath();x.moveTo(0,H*0.815);x.lineTo(W,H*0.815);x.stroke();
+  }
+  function audience(){
+    var rim=cfg.accent||[232,196,90,0.18];
+    for(var hx=W*0.02;hx<W;hx+=W*0.035){
+      var hy=H*0.965+Math.random()*H*0.012,hr=H*0.03+Math.random()*H*0.012;
+      x.fillStyle='#070605';
+      x.beginPath();x.ellipse(hx,hy+hr*1.3,hr*1.5,hr,0,0,6.2832);x.fill();
+      x.beginPath();x.ellipse(hx,hy,hr*0.72,hr,0,0,6.2832);x.fill();
+      x.strokeStyle=rgba([rim[0],rim[1],rim[2]],(rim[3]||0.15)+0.02);x.lineWidth=2;
+      x.beginPath();x.arc(hx,hy,hr*0.72+1,Math.PI*1.15,Math.PI*1.85);x.stroke();
+    }
+  }
+  if(cfg.mode==='void'){
+    var fw=x.createLinearGradient(0,H*0.72,0,H);fw.addColorStop(0,'rgba(18,20,26,0)');fw.addColorStop(1,'rgba(15,17,23,1)');
+    x.fillStyle=fw;x.fillRect(0,H*0.72,W,H*0.28);
+    x.strokeStyle='rgba(46,50,60,0.55)';x.lineWidth=1;x.beginPath();x.moveTo(0,H*0.8);x.lineTo(W,H*0.8);x.stroke();
+    var px=W*0.5,py=H*0.42;
+    x.strokeStyle='rgba(140,128,92,0.10)';x.beginPath();x.moveTo(px,0);x.lineTo(px,py-H*0.03);x.stroke();
+    var pr=Math.min(W,H)*0.34;var pool=x.createRadialGradient(px,H*0.83,2,px,H*0.83,pr);
+    pool.addColorStop(0,'rgba(201,162,39,0.12)');pool.addColorStop(1,'rgba(201,162,39,0)');
+    x.fillStyle=pool;x.save();x.translate(px,H*0.83);x.scale(1,0.22);x.beginPath();x.arc(0,0,pr,0,6.2832);x.fill();x.restore();
+    var u=Math.min(W,H);
+    glow(px,py,u*0.30,[[0,'rgba(232,196,90,0.16)'],[1,'rgba(232,196,90,0)']]);
+    glow(px,py,u*0.13,[[0,'rgba(255,243,208,0.38)'],[1,'rgba(255,243,208,0)']]);
+    glow(px,py,u*0.05,[[0,'rgba(255,248,228,0.9)'],[1,'rgba(255,243,208,0)']]);
+    x.fillStyle='#FFFDF5';x.beginPath();x.arc(px,py,Math.max(3,u*0.006),0,6.2832);x.fill();
+    return;
+  }
+  if(cfg.baseGlow){var bgl=x.createRadialGradient(W/2,H*0.82,10,W/2,H*0.82,Math.max(W,H)*0.5);bgl.addColorStop(0,'rgba(201,120,30,0.10)');bgl.addColorStop(1,'rgba(201,120,30,0)');x.fillStyle=bgl;x.fillRect(0,0,W,H);}
+  var pal=cfg.palette==='cool'?COOL:WARM;
+  var top=H*0.05,bot=H*0.66,pts=[],i;
+  for(i=0;i<cfg.count;i++){
+    var gx=W*0.03+Math.random()*W*0.94, gy=top+Math.random()*(bot-top);
+    var dcx=Math.abs(gx-W/2)/(W/2);
+    var r=cfg.sizeMin+Math.random()*Math.random()*(cfg.sizeMax-cfg.sizeMin)*(1-0.3*dcx);
+    var b=cfg.brightBase+Math.random()*cfg.brightVar;
+    pts.push({gx:gx,gy:gy,r:r,b:b,col:pal[Math.floor(Math.random()*pal.length)]});
+  }
+  if(cfg.survivors){for(i=0;i<cfg.survivors;i++){if(pts[i]){pts[i].b=0.75+Math.random()*0.3;pts[i].r=3.4+Math.random()*1.6;}}}
+  if(cfg.lines){x.lineWidth=1;pts.forEach(function(p,i){if(i%4===0){x.strokeStyle='rgba(150,135,90,0.05)';x.beginPath();x.moveTo(p.gx,0);x.lineTo(p.gx,p.gy);x.stroke();}});}
+  pts.sort(function(a,b){return a.r-b.r;}).forEach(function(p){point(p.gx,p.gy,p.r,p.col,p.b);});
+  if(cfg.stage)stage();
+  if(cfg.audience)audience();
+}
+function renderAll(){document.querySelectorAll('canvas.scene').forEach(renderScene);}
+
+/* ---- arc brightness chart (deck palette) ---- */
+function buildArc(){
+  var pts="40,150 70,149 100,147 120,138 145,134 160,133 185,108 210,90 235,89 258,93 280,88 305,77 330,70 350,66 368,70 388,67 400,69 420,108 440,134 455,139 468,110 478,130 490,100 502,124 512,86 520,79 555,60 590,51 620,47 640,46";
+  var area=pts+" 640,152 40,152";
+  var sw=function(x,fill,inner){return '<rect x="'+x+'" y="178" width="92" height="16" rx="3" fill="'+fill+'" stroke="#d8c39a"/>'+(inner||'');};
+  var svg=''+
+  '<svg viewBox="0 0 680 230" role="img" aria-label="Brightness of the light field across the five beats">'+
+  '<line x1="40" y1="152" x2="640" y2="152" stroke="#d8c39a" stroke-width="1"/>'+
+  '<line x1="160" y1="40" x2="160" y2="206" stroke="#cdb690" stroke-width=".6" stroke-dasharray="3 4"/>'+
+  '<line x1="280" y1="40" x2="280" y2="206" stroke="#cdb690" stroke-width=".6" stroke-dasharray="3 4"/>'+
+  '<line x1="400" y1="40" x2="400" y2="206" stroke="#cdb690" stroke-width=".6" stroke-dasharray="3 4"/>'+
+  '<line x1="520" y1="40" x2="520" y2="206" stroke="#cdb690" stroke-width=".6" stroke-dasharray="3 4"/>'+
+  '<polygon points="'+area+'" fill="#b0852b" opacity=".12"/>'+
+  '<polyline points="'+pts+'" fill="none" stroke="#b0852b" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>'+
+  ['125,138','210,90','350,66','455,139','620,47'].map(function(p){return '<circle cx="'+p.split(',')[0]+'" cy="'+p.split(',')[1]+'" r="3.2" fill="#856017"/>';}).join('')+
+  '<text x="44" y="50" font-family="Cinzel,serif" font-size="11" letter-spacing="1" fill="#6a5d42">BRIGHT</text>'+
+  '<text x="44" y="168" font-family="Cinzel,serif" font-size="11" letter-spacing="1" fill="#6a5d42">DARK</text>'+
+  [['100','The before','#2C2A2A'],['220','Creation','#7ea8dc'],['340','Life','#e0a83a'],['460','The turn','#3a3a44'],['580','The light','#e0a83a']].map(function(c,i){
+     return '<text x="'+c[0]+'" y="216" text-anchor="middle" font-family="EB Garamond,serif" font-style="italic" font-size="14" fill="#332c1d">'+c[1]+'</text>'+
+            sw(parseInt(c[0])-46, c[2]);
+  }).join('')+
+  '</svg>';
+  document.getElementById('arcChart').innerHTML=svg;
+}
+
+/* ---- overhead hang plan ---- */
+function buildPlan(){
+  var s='';
+  s+='<rect x="20" y="20" width="480" height="420" rx="10" fill="#efe4c7" stroke="#d8c39a"/>';
+  // stage
+  s+='<rect x="70" y="48" width="380" height="86" rx="6" fill="#2b2417" stroke="#856017"/>';
+  s+='<text x="260" y="98" text-anchor="middle" font-family="Cinzel,serif" font-size="16" letter-spacing="3" fill="#dcb45a">STAGE</text>';
+  // seating arcs
+  for(var i=0;i<7;i++){var ry=190+i*32;s+='<path d="M70 '+(ry+24)+' Q260 '+(ry-26)+' 450 '+(ry+24)+'" fill="none" stroke="#6f7d4d" stroke-width="3" opacity="'+(0.85-i*0.06)+'"/>';}
+  s+='<text x="260" y="412" text-anchor="middle" font-family="Cinzel,serif" font-size="12" letter-spacing="2" fill="#515e37">AUDIENCE</text>';
+  // field boundary
+  s+='<path d="M58 40 H462 V250 Q260 300 58 250 Z" fill="none" stroke="#b0852b" stroke-width="1.6" stroke-dasharray="6 5"/>';
+  // stipple points
+  var dots='';
+  for(var k=0;k<150;k++){
+    var px=64+Math.random()*392, t=40+Math.random()*210;
+    var lim= t<140?248:(248-(t-140)*0.9);
+    if(t>140 && Math.abs(px-260) > lim*1.0) continue;
+    dots+='<circle cx="'+px.toFixed(0)+'" cy="'+t.toFixed(0)+'" r="'+(1.2+Math.random()*1.8).toFixed(1)+'" fill="#cda349" opacity="'+(0.5+Math.random()*0.45).toFixed(2)+'"/>';
+  }
+  s+=dots;
+  s+='<rect x="76" y="276" width="368" height="22" rx="4" fill="#efe4c7" opacity="0.85"/>';
+  s+='<text x="260" y="291" text-anchor="middle" font-family="EB Garamond,serif" font-style="italic" font-size="14" fill="#6e1f2a">≈1,200 xylobands · over stage + front rows</text>';
+  document.getElementById('planSvg').innerHTML=s;
+}
+
+buildArc(); buildPlan();
+function boot(){renderAll();}
+if(document.readyState==='complete')boot(); else addEventListener('load',boot);
+addEventListener('DOMContentLoaded',renderAll);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(renderAll);
+var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(renderAll,180);},{passive:true});
+</script>
+</body>
+</html>
